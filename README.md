@@ -3,22 +3,54 @@
 The Automated Inventory Management System is a web application that improves efficiency
 for companies to manage employee information. The AIMS application allows management to keep track of total employees, employee information, employee salary, leave dates, and departments.
 
-## How To Use
+## 1. Install Required Software if Needed
 
-### cd server - `node index.js`
+### server
 
-### cd frontend - `npm run dev`
+```
+cd server
+npm i dotenv
+```
 
-### Open http://localhost:5173/login
+### frontend
 
-## Install Required Software if Needed
+```
+cd frontend
+npm i vite
+```
 
-### cd server - `npm i dotenv`
+## 2. Execute Scripts
 
-### cd frontend - `npm i vite`
+### server
 
-## Login
+```
+cd server
+node index.js
+```
 
-### Email - `admin@gmail.com`
+### frontend
 
-### Password - `admin`
+```
+cd frontend
+npm run dev
+```
+
+## 3. Start local server
+
+```
+http://localhost:5173/login
+```
+
+## 4. Login
+
+### Email
+
+```
+admin@gmail.com
+```
+
+### Password
+
+```
+admin
+```
