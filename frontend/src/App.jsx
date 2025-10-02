@@ -35,7 +35,10 @@ function App() {
             path="/admin-dashboard/add-department"
             element={<AddDepartment />}
           ></Route>
-          <Route path="/admin-dashboard/department/:id" element={<EditDepartment />}></Route>
+          <Route
+            path="/admin-dashboard/department/:id"
+            element={<EditDepartment />}
+          ></Route>
         </Route>
         <Route
           path="/employee-dashboard"
