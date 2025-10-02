@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export const columns = [
   {
     // column name in database
@@ -14,10 +16,13 @@ export const columns = [
   },
 ];
 
-export const DepartmentButtons = () => {
+export const DepartmentButtons = (Id) => {
+  const navigate = useNavigate()
   return (
     <div className="flex space-x-3">
-      <button className="px-3 py-1 bg-sky-600 text-white">Edit</button>
+      <button className="px-3 py-1 bg-sky-600 text-white"
+         onClick={() => navigate(`/admin-dashboard/department/${Id}`)}
+      >Edit</button>
       <button className="px-3 py-1 bg-red-600 text-white">Delete</button>
       <button>Delete</button>
     </div>

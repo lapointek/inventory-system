@@ -27,7 +27,7 @@ const DepartmentList = () => {
             _id: dep._id,
             sno: sno++,
             dep_name: dep.dep_name,
-            action: <DepartmentButtons />,
+            action: (<DepartmentButtons Id={dep._id}/>),
           }));
           setDepartments(data);
         }

@@ -45,4 +45,16 @@ const addDepartment = async (req, res) => {
   }
 };
 
-export { addDepartment, getDepartments };
+const editDepartment = async (req, res) => {
+    try {
+      const {id} = req.params;
+      const department = await Department.findById({_id: id})
+    return res.status(200).json({ success: true, department });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ success: false, error: "Failed to get departments" });
+  }
+}
+
+export { addDepartment, getDepartments, editDepartment };
