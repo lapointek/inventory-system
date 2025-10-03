@@ -37,9 +37,7 @@ npm run dev
 
 ## 3. Start local server
 
-```
 http://localhost:5173/login
-```
 
 ## 4. Login
 
