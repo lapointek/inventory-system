@@ -45,16 +45,35 @@ const addDepartment = async (req, res) => {
   }
 };
 
-const editDepartment = async (req, res) => {
-    try {
-      const {id} = req.params;
-      const department = await Department.findById({_id: id})
+const getDepartment = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const department = await Department.findById({ _id: id });
     return res.status(200).json({ success: true, department });
   } catch (error) {
     return res
       .status(500)
       .json({ success: false, error: "Failed to get departments" });
   }
-}
+};
 
-export { addDepartment, getDepartments, editDepartment };
+const updateDepartment = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const { dep_name, description } = req.body;
+    const updateDep = await Department.findByIdAndUpdate(
+      { _id: id },
+      {
+        dep_name,
+        description,
+      }
+    );
+    return res.status(200).json({ success: true, department });
+  } catch (error) {
+    return res
+      .status(500)
+      .json({ success: false, error: "Failed to get departments" });
+  }
+};
+
+export { addDepartment, getDepartments, getDepartment, updateDepartment };
